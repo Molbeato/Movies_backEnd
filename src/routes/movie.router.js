@@ -12,13 +12,15 @@ movieRouter.route('/:id')
     .delete(remove)
     .put(update);
 
+movieRouter.route('/:id/genres')
+    .post(setMovieGenre)
+
 movieRouter.route('/:id/actors')
     .post(setMovieActor);
 
 movieRouter.route('/:id/directors')
     .post(setMovieDirector);
 
-movieRouter.route('/:id/genres')
-    .post(setMovieGenre)
+
 
 module.exports = movieRouter;
